@@ -27,7 +27,7 @@ switch (process.env.NODE_ENV) {
       type: 'postgres',
       url: process.env.DATABASE_URL,
       migrationsRun: true,
-      entities: ['dist/**/*.entity.js'],
+      entities: ['src/**/*.entity.js'],
       ssl: {
         rejectUnauthorized: false,
       },
