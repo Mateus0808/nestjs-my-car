@@ -6,7 +6,7 @@ module.exports = class initialSchema1651024445899 {
   async up(queryRunner) {
     await queryRunner.createTable(
       new Table({
-        name: 'user',
+        name: 'users',
         columns: [
           {
             name: 'id',
@@ -34,7 +34,7 @@ module.exports = class initialSchema1651024445899 {
 
     await queryRunner.createTable(
       new Table({
-        name: 'report',
+        name: 'reports',
         columns: [
           {
             name: 'id',
@@ -48,7 +48,7 @@ module.exports = class initialSchema1651024445899 {
           { name: 'make', type: 'varchar' },
           { name: 'model', type: 'varchar' },
           { name: 'year', type: 'integer' },
-          { name: 'lng', type: 'float' },
+          { name: 'long', type: 'float' },
           { name: 'lat', type: 'float' },
           { name: 'mileage', type: 'integer' },
           { name: 'userId', type: 'integer' },
@@ -58,7 +58,7 @@ module.exports = class initialSchema1651024445899 {
   }
 
   async down(queryRunner) {
-    await queryRunner.query(`DROP TABLE ""report""`);
-    await queryRunner.query(`DROP TABLE ""user""`);
+    await queryRunner.query(`DROP TABLE ""reports""`);
+    await queryRunner.query(`DROP TABLE ""users""`);
   }
 };
